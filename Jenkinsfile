@@ -2,13 +2,13 @@ pipline {
 agent any
 
 environment{
-DOCKER_IMAGE = "ayoubhammou/myrepo:monitorinapp2"
+DOCKER_IMAGE = "ayoubhammou/myrepo:monitorinatag"
 }
 
 stages{
     stage('checkout git repo'){
         steps{
-        git 'https://github.com/Ayoub-HM/myrepo/tree/main/Monitoring'
+        git 'https://github.com/Ayoub-HM/myrepo.git'
 
         }
     }
