@@ -1,0 +1,21 @@
+pipline {
+agent any
+
+environment{
+DOCKER_IMAGE = "ayoubhammou/myrepo:monitorinapp2"
+}
+
+stages{
+    stage('checkout git repo'){
+        steps{
+        git 'https://hub.docker.com/repository/docker/ayoubhammou/myrepo/general'
+        }
+    }
+
+    stage('build docker image'){
+        script{
+        docker.build(DOCKER_IMAGE)
+        }
+    }
+}
+}
