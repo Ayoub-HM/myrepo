@@ -8,7 +8,7 @@ DOCKER_IMAGE = "ayoubhammou/myrepo:monitorinatag"
 stages{
     stage('checkout git repo'){
         steps{
-        git 'https://github.com/Ayoub-HM/myrepo.git'
+        git branch: 'main', url: 'https://github.com/Ayoub-HM/myrepo.git'
 
         }
     }
